@@ -135,7 +135,27 @@ Lets,
 2. Make, accept and merge a pull request on GitHub
 3. Update local master to GitHub master
 4. Make a local v0.2 and checkout this version
+This sequence of events will be repeated between each version and should be used as a reference at the end of each version.
 
+
+1. Push this local version (v0.1) to GitHub
+```
+git add -A
+git commit -m"App bar up n running"
+git push --set-upstream origin v0.1
 ```
 
+2. Make, accept and merge a pull request on GitHub
+  - in your GitHub repository, make a pull request, compare master to v0.1, confirm, and merge. This makes your GitHub master repository up to date with v0.1.
+
+3. Update local master to GitHub master
+```
+git checkout master
+git pull
+```
+
+4. Make a local v0.2 and checkout this version
+```
+git branch v0.2
+git checkout v0.2
 ```
